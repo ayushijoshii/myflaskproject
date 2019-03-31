@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>My Web Page</title>
+	<body>
+		 <h1 style="color: red;">hello,,world</h1>
+		 <h2> i am {{name}}</h2>
+		 <p>current time is {{now}}</p>
+		{% if name== "nikhil" %}
+		welcome master!
+		{% else %}
+		go back stranger!
+		{% endif %}
+
+        <ul>
+        	{% for color in colors%}
+        	<li>{{color}}</li>
+        	{% endfor %}
+        </ul>
+
+		 <table border="1">
+		 	<thead>
+		 		<th>students</th>
+		 		<th>class</th>
+		 		<th>grade</th>
+	 		</thead>
+	 		<tbody>
+	 			{% for row in data %}
+	 			<tr>
+	 				{% for col in row %}
+	 				<td>{{col}}</td>
+	 				{% endfor %}
+	 			</tr>
+	 			{% endfor %}
+	 		</tbody>
+	    </table>
+
+	    <img src="static/images/mark2.jpg" height=300 width=300>
+		
+
+	</body>
+</html>
